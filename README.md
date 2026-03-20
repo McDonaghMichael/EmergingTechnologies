@@ -1,9 +1,15 @@
 # EmergingTechnologies
 
-
 An implementation of the [Deutsch–Jozsa algorithm](https://quantum.cloud.ibm.com/learning/en/modules/computer-science/deutsch-jozsa), built as part of an exploration into quantum computing.
 
 The notebook covers generating valid Boolean test functions, solving the constant-vs-balanced problem classically, building quantum oracles and running both Deutsch's single-bit algorithm and the full n-bit Deutsch-Jozsa algorithm on a simulated quantum computer.
+
+## Table of Contents
+
+- [File Structure](#file-structure)
+- [Problems](#problems)
+- [Getting Started](#getting-started)
+- [Documentation & Resources](#documentation--resources)
 
 ## File Structure
 
@@ -15,10 +21,22 @@ EmergingTechnologies/
 └── README.md           # Documentation of the project
 ```
 
+## Problems
+
+All problems are implemented in [problems.ipynb](problems.ipynb).
+
+| Problem | Title | Summary |
+|---------|-------|---------|
+| [1](problems.ipynb#problem-1-generating-random-boolean-functions) | Generating Random Boolean Functions | Implements `random_constant_balanced()`, a function that randomly generates a constant or balanced 4-bit Boolean function for use as test input to the algorithm |
+| [2](problems.ipynb#problem-2-classical-testing-for-function-type) | Classical Testing for Function Type | Implements `determine_constant_balanced()`, which classically determines if a function is constant or balanced, requiring up to 9 queries in the worst case |
+| [3](problems.ipynb#problem-3-quantum-oracles) | Quantum Oracles | Builds Qiskit quantum oracle circuits for all four single-input Boolean functions using X gates and CNOT gates |
+| [4](problems.ipynb#problem-4-deutschs-algorithm-with-qiskit) | Deutsch's Algorithm with Qiskit | Implements Deutsch's algorithm as a 2-qubit circuit that determines constant vs balanced in a single oracle query using phase kickback |
+| [5](problems.ipynb#problem-5-scaling-to-the-deutschjozsa-algorithm) | Scaling to the Deutsch–Jozsa Algorithm | Generalises the circuit to 5 qubits (4 input + 1 ancilla) to handle the 4-bit functions from Problem 1, solving the problem in one query regardless of input size |
+
 ## Getting Started
 
 ### Prerequisites
-- [Python](https://docs.python.org/3/) (>3.8) 
+- [Python](https://docs.python.org/3/) (>3.8)
 - [NumPy](https://numpy.org/doc/stable/)
 - [Jupyter Notebook](https://docs.jupyter.org/en/latest/)
 
@@ -75,7 +93,7 @@ jupyter notebook
 
 The following IDEs/Code Editors have Jupyter Notebook capabilities directly or via extensions
 
-- [Visual Studio Code](https://code.visualstudio.com/) 
+- [Visual Studio Code](https://code.visualstudio.com/)
     - [Jupyter Extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 - [PyCharm](https://www.jetbrains.com/pycharm/) (Built-in functionality)
 
@@ -86,7 +104,7 @@ The following IDEs/Code Editors have Jupyter Notebook capabilities directly or v
 
 
 ### Tools and Libraries
-- [Python](https://docs.python.org/3/) (>3.8) 
+- [Python](https://docs.python.org/3/) (>3.8)
 - [NumPy](https://numpy.org/doc/stable/)
 - [Qiskit Docs](https://quantum.cloud.ibm.com/docs/en/guides)
 - [Jupyter Notebook](https://docs.jupyter.org/en/latest/)
