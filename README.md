@@ -1,5 +1,13 @@
 # EmergingTechnologies
 
+![Python](https://img.shields.io/badge/python-3.8+-blue)
+![Qiskit](https://img.shields.io/badge/qiskit-latest-purple)
+![Qiskit Aer](https://img.shields.io/badge/qiskit--aer-latest-purple)
+![Matplotlib](https://img.shields.io/badge/matplotlib-latest-orange)
+![Jupyter](https://img.shields.io/badge/jupyter-latest-orange)
+
+> Quantum algorithm implementation using Qiskit, running on a simulated quantum computer.
+
 An implementation of the [Deutsch–Jozsa algorithm](https://quantum.cloud.ibm.com/learning/en/modules/computer-science/deutsch-jozsa), built as part of an exploration into quantum computing.
 
 The notebook covers generating valid Boolean test functions, solving the constant-vs-balanced problem classically, building quantum oracles and running both Deutsch's single-bit algorithm and the full n-bit Deutsch-Jozsa algorithm on a simulated quantum computer.
@@ -31,13 +39,15 @@ All problems are implemented in [problems.ipynb](problems.ipynb).
 | [2](problems.ipynb#problem-2-classical-testing-for-function-type) | Classical Testing for Function Type | Implements `determine_constant_balanced()`, which classically determines if a function is constant or balanced, requiring up to 9 queries in the worst case |
 | [3](problems.ipynb#problem-3-quantum-oracles) | Quantum Oracles | Builds Qiskit quantum oracle circuits for all four single-input Boolean functions using X gates and CNOT gates |
 | [4](problems.ipynb#problem-4-deutschs-algorithm-with-qiskit) | Deutsch's Algorithm with Qiskit | Implements Deutsch's algorithm as a 2-qubit circuit that determines constant vs balanced in a single oracle query using phase kickback |
-| [5](problems.ipynb#problem-5-scaling-to-the-deutschjozsa-algorithm) | Scaling to the Deutsch–Jozsa Algorithm | Generalises the circuit to 5 qubits (4 input + 1 ancilla) to handle the 4-bit functions from Problem 1, solving the problem in one query regardless of input size |
+| [5](problems.ipynb#problem-5-scaling-to-the-deutschjozsa-algorithm) | Scaling to the Deutsch–Jozsa Algorithm | Generalises the circuit to 5 qubits (4 input + 1 target qubit) to handle the 4-bit functions from Problem 1, solving the problem in one query regardless of input size |
 
 ## Getting Started
 
 ### Prerequisites
 - [Python](https://docs.python.org/3/) (>3.8)
-- [NumPy](https://numpy.org/doc/stable/)
+- [Qiskit](https://quantum.cloud.ibm.com/docs/en/guides)
+- [Qiskit Aer](https://github.com/Qiskit/qiskit-aer)
+- [Matplotlib](https://matplotlib.org/)
 - [Jupyter Notebook](https://docs.jupyter.org/en/latest/)
 
 ---
@@ -51,12 +61,12 @@ git clone https://github.com/McDonaghMichael/EmergingTechnologies.git
 cd EmergingTechnologies
 ```
 ---
-### Step 3 - Setup and Activate Virtual Enviorment
+### Step 3 - Setup and Activate Virtual Environment
 ```bash
 python -m venv venv
 ```
 
-In order to activate the enviorment use one of the following commands based on your OS
+In order to activate the environment use one of the following commands based on your OS
 
 **Windows**
 ```powershell
@@ -77,7 +87,7 @@ pip install -r requirements.txt
 
 **Manual Installation**
 ```bash
-pip install numpy qiskit qiskit-aer jupyter
+pip install qiskit qiskit-aer matplotlib jupyter
 ```
 ---
 ### Step 5 - Launch Jupyter Notebook
@@ -100,11 +110,12 @@ The following IDEs/Code Editors have Jupyter Notebook capabilities directly or v
 ## Documentation & Resources
 
 ### Resources
-- [The Deutsch-Jozsa algorithm](https://quantum.cloud.ibm.com/learning/en/modules/computer-science/deutsch-jozsa)
-
+- [The Deutsch–Jozsa Algorithm](https://quantum.cloud.ibm.com/learning/en/modules/computer-science/deutsch-jozsa)
+- [Deutsch's Algorithm](https://quantum.cloud.ibm.com/learning/en/courses/fundamentals-of-quantum-algorithms/quantum-query-algorithms/deutsch-algorithm)
 
 ### Tools and Libraries
 - [Python](https://docs.python.org/3/) (>3.8)
-- [NumPy](https://numpy.org/doc/stable/)
 - [Qiskit Docs](https://quantum.cloud.ibm.com/docs/en/guides)
+- [Qiskit Aer](https://github.com/Qiskit/qiskit-aer)
+- [Matplotlib](https://matplotlib.org/)
 - [Jupyter Notebook](https://docs.jupyter.org/en/latest/)
