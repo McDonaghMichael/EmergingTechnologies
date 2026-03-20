@@ -5,6 +5,16 @@ An implementation of the [Deutsch–Jozsa algorithm](https://quantum.cloud.ibm.c
 
 The notebook covers generating valid Boolean test functions, solving the constant-vs-balanced problem classically, building quantum oracles and running both Deutsch's single-bit algorithm and the full n-bit Deutsch-Jozsa algorithm on a simulated quantum computer.
 
+## File Structure
+
+```
+EmergingTechnologies/
+├── .gitignore          # Files and folders to be ignored by Git
+├── problems.ipynb      # Main notebook covering all 5 problems
+├── requirements.txt    # Python dependencies
+└── README.md           # Documentation of the project
+```
+
 ## Getting Started
 
 ### Prerequisites
